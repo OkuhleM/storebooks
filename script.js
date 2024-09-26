@@ -11,7 +11,7 @@ class Book {
     this.alreadyRead = checkRead;
 
     const myBook = new Book(title, author, pages, checkRead);
-    console.log("myBook", myBook);
+    console.log('title,author,pages,checkRead', title,author,pages,checkRead)
     myLibrary.push(myBook);
   }
 }
@@ -19,12 +19,12 @@ class Book {
 const addElement = (title, author, pages, checkRead) => {
   console.log('title,author,pages,checkRead', title,author,pages,checkRead)
   let bookContainer = document.getElementById("card-container");
-
+console.log('bookContainer', bookContainer)
   const removeBtn = document.createElement("button");
   removeBtn.classList.add("removeBtn");
   removeBtn.textContent = "X";
 
-  remove.addEventListener("click", function () {
+  removeBtn.addEventListener("click", function () {
     bookContainer.remove();
   });
 
@@ -35,12 +35,12 @@ const addElement = (title, author, pages, checkRead) => {
   cardChangeStatusButton.textContent = "✔";
 
   cardChangeStatusButton.addEventListener("click", function () {
-    let status = cardRow5.textContent;
+    let status = readCheckRead.textContent;
 
     if (status == "The book is read") {
-      cardRow5.textContent = "The book is not read";
+      readCheckRead.textContent = "The book is not read";
     } else {
-      cardRow5.textContent = "The book is read";
+      readCheckRead.textContent = "The book is read";
     }
   });
 
@@ -70,10 +70,14 @@ newBook.addEventListener("click",(e)=>{
   let checkRead = false;  
 
 const dialogue = document.getElementById("book-list")
-const titleInput = document.getElementById("title").value;
-const authorInput = document.getElementById("author").value;
-const pagesInput = document.getElementById("pages").value;
-const checkInput = document.getElementById("Cyes").value
+const titleInput = document.querySelector("#inputTitle")
+// const titleInput = document.getElementById("inputTitle").value;
+const authorInput = document.querySelector("#author")
+// const authorInput = document.getElementById("author").value;
+const pagesInput = document.querySelector("#pages")
+// const pagesInput = document.getElementById("pages").value;
+// const checkInput = document.getElementById("Cyes").value
+const checkInput = document.querySelector("#Cyes")
 const form = document.getElementById("form")
 
 const optionContainer = document.createElement("div");
@@ -92,13 +96,11 @@ confirmBtn.classList.add("confirmButton");
 confirmBtn.textContent = "Add Book";
 form.appendChild(confirmBtn);
 
-console.log('confirmBtn', confirmBtn)
-
 confirmBtn.addEventListener("click",function(event){
   console.log('clicked' )
   event.preventDefault();
   title = titleInput.value;
-  console.log('title', title)
+  console.log('title', titleInput.value)
   author = authorInput.value;
   console.log('authorInput', authorInput)
   pages = pagesInput.value;
@@ -110,28 +112,14 @@ confirmBtn.addEventListener("click",function(event){
       checkRead = "The book is not read";
   }
   console.log('title,author,pages,checkRead', title,author,pages,checkRead)
-  addBookToLibrary(title,author,pages,checkRead);
-  dialogue.close();
+  addElement(title,author,pages,checkRead);
+  // dialogue.close();
 
 })
-dialogue.show();
+// dialogue.show();
 
 })
 
 resetBtn.addEventListener("click",function(){
-  bookContainer.innerHTML = "";
+  containerBook.innerHTML = "";
 })
-// const addBookToLibrary = (event) => {
-//   event.preventDefault();
-
-//   let Title = document.getElementById("title").value;
-//   console.log("Title", Title);
-//   let Author = document.getElementById("author").value;
-//   console.log("Author", Author);
-//   let Pages = document.getElementById("pages").value;
-//   console.log("Pages", Pages);
-//   let AlreadyReadYes = document.getElementById("yes").value;
-//   console.log("AlreadyReadYes", AlreadyReadYes);
-//   let AlreadyReadNo = document.getElementById("no").value;
-//   console.log("AlreadyReadNo", AlreadyReadNo);
-// };
