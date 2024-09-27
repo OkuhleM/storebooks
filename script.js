@@ -104,10 +104,10 @@ confirmBtn.addEventListener("click",function(event){
       checkRead = "The book is not read";
   }
   addElement(title,author,pages,checkRead);
-  // dialogue.close();
+  dialogue.close();
 
 })
-// dialogue.show();
+dialogue.show();
 
 })
 
