@@ -22,7 +22,7 @@ const addElement = (title, author, pages, checkRead) => {
 console.log('bookContainer', bookContainer)
   const removeBtn = document.createElement("button");
   removeBtn.classList.add("removeBtn");
-  removeBtn.textContent = "X";
+  removeBtn.textContent = "Remove";
 
   removeBtn.addEventListener("click", function () {
     bookContainer.remove();
@@ -32,7 +32,7 @@ console.log('bookContainer', bookContainer)
 
   const cardChangeStatusButton = document.createElement("button");
   cardChangeStatusButton.classList.add("status-btn");
-  cardChangeStatusButton.textContent = "✔";
+  cardChangeStatusButton.textContent = "Check";
 
   cardChangeStatusButton.addEventListener("click", function () {
     let status = readCheckRead.textContent;
@@ -71,24 +71,20 @@ newBook.addEventListener("click",(e)=>{
 
 const dialogue = document.getElementById("book-list")
 const titleInput = document.querySelector("#inputTitle")
-// const titleInput = document.getElementById("inputTitle").value;
 const authorInput = document.querySelector("#author")
-// const authorInput = document.getElementById("author").value;
 const pagesInput = document.querySelector("#pages")
-// const pagesInput = document.getElementById("pages").value;
-// const checkInput = document.getElementById("Cyes").value
 const checkInput = document.querySelector("#Cyes")
 const form = document.getElementById("form")
 
-const optionContainer = document.createElement("div");
-optionContainer.classList.add("optionContainer");
-form.appendChild(optionContainer);
+// const optionContainer = document.createElement("div");
+// optionContainer.classList.add("optionContainer");
+// form.appendChild(optionContainer);
 
 
-const formButtonCancel = document.createElement("button");
-    formButtonCancel.classList.add("cancelButton");
-    formButtonCancel.textContent = "X";
-    form.appendChild(formButtonCancel);
+// const formButtonCancel = document.createElement("button");
+//     formButtonCancel.classList.add("cancelButton");
+//     formButtonCancel.textContent = "X";
+//     form.appendChild(formButtonCancel);
 
 const confirmBtn = document.createElement("button");
 confirmBtn.setAttribute("for","submit");
@@ -97,21 +93,16 @@ confirmBtn.textContent = "Add Book";
 form.appendChild(confirmBtn);
 
 confirmBtn.addEventListener("click",function(event){
-  console.log('clicked' )
   event.preventDefault();
   title = titleInput.value;
-  console.log('title', titleInput.value)
   author = authorInput.value;
-  console.log('authorInput', authorInput)
   pages = pagesInput.value;
-  console.log('pages', pages)
   if(checkInput.checked == true ){
       checkRead = "The book is read";
   }
   else{
       checkRead = "The book is not read";
   }
-  console.log('title,author,pages,checkRead', title,author,pages,checkRead)
   addElement(title,author,pages,checkRead);
   // dialogue.close();
 

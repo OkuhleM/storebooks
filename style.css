@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#book {
+  margin: 2rem auto;
+  
+  border: 2px solid black;
+  width: 35%;
+  padding: 2rem 4rem;
+}
+
+label {
+  margin: auto;
+  font-size: 25px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5rem 1rem;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-family: "Love Like This", sans-serif;
+  font-size: 35px;
+  color: #ff0065;
+  border: 4px solid #800080;
+  background-color: #d8bfd8;
+  letter-spacing: 10px;
+}
+
+@font-face {
+  font-family: "Love Like This";
+  font-size: 100px;
+  src: url("https://db.onlinewebfonts.com/t/ea0153336c084ccbdeb5ac43435b451d.eot");
+  src: url("https://db.onlinewebfonts.com/t/ea0153336c084ccbdeb5ac43435b451d.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ea0153336c084ccbdeb5ac43435b451d.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ea0153336c084ccbdeb5ac43435b451d.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/ea0153336c084ccbdeb5ac43435b451d.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ea0153336c084ccbdeb5ac43435b451d.svg#Love Like This")
+      format("svg");
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+#submit,
+#reset {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  border-radius: 2rem;
+  background-color: #E6E6FA;
+  border: 2px solid #800080;
+}
+
+.btns{
+    display: flex;
+    gap: 2rem;
+}
+
+p{
+    font-size: 20px;
+}
+.confirmButton,.cancelButton{
+    padding: 0.5rem 0.2rem;
+    margin-bottom: 25px;
+    border-radius: 17px;
+}
+
+#book-list{
+    border: 2px solid #ff0065;
+    width: 35%;
+    padding: 2rem 1rem;
+    margin: 2rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.removeBtn, .status-btn{
+    padding: 0.5rem 1rem;
+    width: 50%;
+    border: 2px solid forestgreen;
+    gap: 12px;
+}
+
+button:hover{
+    cursor: pointer;
+}

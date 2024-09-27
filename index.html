@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Pirata+One|Sofia|Lato|Roboto|Poppins "
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
 
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="header">*Library|</div>
 
-<div id="book">
-
-    <form id="form">
-
+    <div id="book">
+      <form id="form">
         <label>Title</label>
-        <input type="text" name="title"  id="inputTitle"/><br/>
+        <input type="text" name="title" id="inputTitle" /><br />
         <label>Author</label>
-        <input type="text" name="author" id="author"/><br/>
+        <input type="text" name="author" id="author" /><br />
         <label>Pages</label>
-        <input type="number" name="pages" id="pages"/><br/>
-       <input type="radio" value="false" name="Yes" id="Cyes"/>
-       <label for="yes">Book Read</label><br/>
-
-        <button id="submit"">Add New Book</button> 
-
-    </form>
-
-
-
-<div class="book-container" id="card-container">
-    <div id="book-list">
-<p id="element-title"></p>
-<p id="element-author"></p>
-<p id="element-pages"></p>
-<p id="element-checkRead"></p>
+        <input type="number" name="pages" id="pages" /><br />
+        <input type="radio" value="false" name="Yes" id="Cyes" />
+        <label for="yes">Book Read</label><br />
+      </form>
+      <div class="btns">
+        <button id="submit">Add New Book</button>
+        <button id="reset">Reset</button>
+      </div>
     </div>
-</div>
-<button id="reset">Reset</button>
-</div>
-
-
-</body>
+    <div id="book-list">
+        <p id="element-title">Title:</p>
+        <p id="element-author">Author:</p>
+        <p id="element-pages">Pages:</p>
+        <p id="element-checkRead">Read?</p>
+        <div class="book-container" id="card-container"></div>
+    </div>
+  </body>
 </html>
